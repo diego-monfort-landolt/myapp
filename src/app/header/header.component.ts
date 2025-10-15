@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { Component } from '@angular/core';
 import { TitleComponent } from "../title/title.component";
 
 @Component({
@@ -9,7 +9,7 @@ import { TitleComponent } from "../title/title.component";
   imports: [TitleComponent,]
 })
 export class HeaderComponent {
-  pageTitle = 'My Application Header';
+  pageTitle = 'My Application Angular';
   constructor() {}
 
 }

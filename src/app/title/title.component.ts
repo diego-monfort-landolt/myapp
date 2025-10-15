@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-title',
@@ -7,7 +7,13 @@ import { Component, Input } from '@angular/core';
   templateUrl: './title.component.html',
   styleUrl: './title.component.scss'
 })
-export class TitleComponent {
- @Input() title = 'Developer Title';
+export class TitleComponent implements OnChanges {
+ @Input() title = '';
+ @Output() dataFromChild = new EventEmitter();
+
+ ngOnChanges(changes: SimpleChanges): void {
+   console.log(changes);
+   this.dataFromChild.emit('data from child');
+ }
 
 }
