@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './user-card.component.scss'
 })
 export class UserCardComponent {
-  name = 'Jhon';
-  surname = 'Doe';
+  name = 'Diaz';
+  surname = 'Sarah';
   age = 33;
   married = true;
   address = {
@@ -19,5 +19,8 @@ export class UserCardComponent {
   };
   private dni = '34432432';
   public nationality = 'Japanese';
+  getDate() {
+    return new Date();
+  }
 
 }
