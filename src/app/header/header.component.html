@@ -1,1 +1,7 @@
-<app-title [title]="pageTitle"></app-title>
+<header class="hero-section">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <app-title [title]="pageTitle" (dataFromChild)="onDataCheck($event)"></app-title>
+    <p class="hero-subtitle">Esta es mi primera app de Angular que estoy practicando</p>
+  </div>
+</header>

@@ -15,5 +15,4 @@ export class TitleComponent implements OnChanges {
    console.log(changes);
    this.dataFromChild.emit('data from child');
  }
-
 }

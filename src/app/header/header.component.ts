@@ -12,4 +12,8 @@ export class HeaderComponent {
   pageTitle = 'My Application Angular';
   constructor() {}
 
+  onDataCheck(e: any) {
+    console.log(e);
+  }
+
 }

@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url('/assets/avatarIA.jpeg');
+  background-image: url("/assets/avatarIA.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,7 +11,7 @@
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  margin-bottom: 10px
+  margin-bottom: 10px;
 }
 
 .overlay {
@@ -20,7 +20,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(20, 20, 20, 0.6); // oscurece la imagen
+  background-color: rgba(20, 20, 20, 0.6);
   z-index: 1;
 }
 
@@ -30,7 +30,6 @@
   color: #ffffff;
   padding: 2rem;
   max-width: 800px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,13 +41,17 @@
   font-weight: 400;
   color: #fff;
   margin-top: 0.5rem;
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+  .hero-subtitle {
     font-size: 1rem;
     padding: 0 1rem;
   }
+}
 
-  @media (max-width: 480px) {
+@media (max-width: 480px) {
+  .hero-subtitle {
     font-size: 0.95rem;
   }
 }

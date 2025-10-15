@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
+import { AvatarComponent } from './avatar/avatar.component';
 
 @Component({
   
@@ -14,7 +15,8 @@ import { FooterComponent } from './footer/footer.component';
     RouterOutlet, 
     HeaderComponent, 
     MainComponent, 
-    FooterComponent
+    FooterComponent,
+    AvatarComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

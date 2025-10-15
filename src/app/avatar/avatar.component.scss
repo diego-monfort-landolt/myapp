@@ -1,0 +1,81 @@
+.avatar-profile {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  max-width: 600px;
+  width: 80%;
+  margin-left: 0;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+}
+
+.avatar-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #00d1b2;
+  box-shadow: 0 4px 8px rgba(0, 209, 178, 0.3);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.avatar-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    align-items: center;
+  }
+}
+
+.avatar-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1e1e2f;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+}
+
+.avatar-role {
+  font-size: 1rem;
+  color: #00d1b2;
+  margin: 0.25rem 0;
+  font-weight: 500;
+
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+  }
+}
+
+.avatar-bio {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
+}
