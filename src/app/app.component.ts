@@ -5,6 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { AvatarComponent } from './avatar/avatar.component';
+import { UserCardComponent } from './user-card/user-card.component';
 
 @Component({
   
@@ -16,7 +17,8 @@ import { AvatarComponent } from './avatar/avatar.component';
     HeaderComponent, 
     MainComponent, 
     FooterComponent,
-    AvatarComponent
+    AvatarComponent,
+    UserCardComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

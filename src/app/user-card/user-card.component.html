@@ -1,0 +1,19 @@
+<div class="user-card">
+  <div class="user-header">
+    <h2>{{ name }} {{ surname }}</h2>
+    <span class="user-status" [class.married]="married">
+      {{ married ? 'Casado/a' : 'Soltero/a' }}
+    </span>
+  </div>
+
+  <div class="user-info">
+    <p><strong>Edad:</strong> {{ age }}</p>
+    <p><strong>Nacionalidad:</strong> {{ nationality }}</p>
+    <p><strong>Dirección:</strong></p>
+    <ul>
+      <li><strong>País:</strong> {{ address.country }}</li>
+      <li><strong>Ciudad:</strong> {{ address.city }}</li>
+      <li><strong>Calle:</strong> {{ address.street }}</li>
+    </ul>
+  </div>
+</div>
