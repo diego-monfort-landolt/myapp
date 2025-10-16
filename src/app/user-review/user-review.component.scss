@@ -6,12 +6,13 @@
 
 .keen-slider__slide {
   flex-shrink: 0;
-  background: #fff;
+  background: #faf2f2af;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   padding: 1.5rem;
   text-align: center;
   transition: transform 0.3s ease;
+  margin: 1rem 0.5rem;
 
   &:hover {
     transform: translateY(-5px);
