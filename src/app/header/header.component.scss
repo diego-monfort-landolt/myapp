@@ -36,6 +36,27 @@
   align-items: center;
   gap: 1rem;
 }
+.profile-avatar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+
+  img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #fa0000;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(79, 248, 1, 0.651);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
 
 .hero-subtitle {
   font-size: 1.2rem;

@@ -10,8 +10,8 @@ import { TitleComponent } from "../title/title.component";
 })
 export class HeaderComponent {
   pageTitle = 'My Application Angular';
+  
   constructor() {}
-
   onDataCheck(e: any) {
     console.log(e);
   }
