@@ -1,5 +1,6 @@
 .keen-slider {
   display: flex;
+  
   overflow: hidden;
 }
 .keen-slider__slide {
@@ -11,7 +12,8 @@
   text-align: center;
   transition: transform 0.3s ease;
   margin: 1rem 0.5rem;
-
+  align-items: center;
+  justify-content: center;
   &:hover {
     transform: translateY(-5px);
   }

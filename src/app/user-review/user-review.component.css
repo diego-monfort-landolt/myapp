@@ -12,6 +12,8 @@
   text-align: center;
   transition: transform 0.3s ease;
   margin: 1rem 0.5rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .keen-slider__slide:hover {
