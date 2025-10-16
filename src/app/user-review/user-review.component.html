@@ -1,0 +1,12 @@
+<div #sliderRef class="keen-slider">
+  <div class="keen-slider__slide" *ngFor="let user of users">
+    <img [src]="user.photo" alt="Foto de perfil" class="avatar" />
+    <div class="name">{{ user.name }}</div>
+    <div class="city">{{ user.city }}</div>
+    <div class="stars">
+      <ng-container *ngFor="let star of [1,2,3,4,5]; let i = index">
+        <i class="star" [class.filled]="i < user.rating">★</i>
+      </ng-container>
+    </div>
+  </div>
+</div>

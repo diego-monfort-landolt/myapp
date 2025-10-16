@@ -1,0 +1,51 @@
+.keen-slider {
+  display: flex;
+  overflow: hidden;
+  
+}
+
+.keen-slider__slide {
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 0 3px #eee;
+  }
+
+  .name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .city {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+  }
+
+  .stars {
+    .star {
+      font-size: 1.2rem;
+      color: lightgray;
+
+      &.filled {
+        color: gold;
+      }
+    }
+  }
+}

@@ -95,6 +95,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/keen-slider/keen-slider.min.css",
               "src/styles.scss"
             ],
             "scripts": []

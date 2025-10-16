@@ -6,6 +6,8 @@ import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { AvatarComponent } from './avatar/avatar.component';
 import { UserCardComponent } from './user-card/user-card.component';
+import { UserReviewComponent } from './user-review/user-review.component';
+
 
 @Component({
   
@@ -19,6 +21,7 @@ import { UserCardComponent } from './user-card/user-card.component';
     FooterComponent,
     AvatarComponent,
     UserCardComponent,
+    UserReviewComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
