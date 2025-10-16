@@ -25,6 +25,8 @@ import { UserReviewComponent } from './user-review/user-review.component';
     HeaderComponent, 
     MainComponent,
     FooterComponent,
+    AvatarComponent,
+    UserReviewComponent
   ],
 })
 export class ComponentsModule { }
