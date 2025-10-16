@@ -1,13 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './components/header/header.component';
-import { MainComponent } from './components/main/main.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { UserReviewComponent } from './components/user-review/user-review.component';
-import { AvatarComponent } from './components/avatar/avatar.component';
 import { ComponentsModule } from './components/components.module';
-
-
+import { ProductsComponent } from './pages/products/products.component';
 
 @Component({
   
@@ -15,7 +9,8 @@ import { ComponentsModule } from './components/components.module';
   standalone: true,
   imports: [
     CommonModule, 
-    ComponentsModule
+    ComponentsModule,
+    ProductsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
