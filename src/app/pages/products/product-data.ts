@@ -21,5 +21,27 @@ export const PRODUCTS: Product[] = [
     description: 'New...',
     image: 'https://cdn.pixabay.com/photo/2021/09/25/17/43/iphone-13-6655518_640.jpg',
     available: false
-  }
+  },
+  {
+  id: 4,
+  title: 'Auriculares inalámbricos Pro',
+  description: 'Cancelación de ruido, 30h de batería, carga rápida USB-C.',
+  image: 'https://cdn.pixabay.com/photo/2018/09/17/14/27/headphones-3683983_1280.jpg',
+  available: true
+},
+{
+  id: 5,
+  title: 'Smartwatch deportivo',
+  description: 'GPS integrado, resistente al agua, monitor de ritmo cardíaco.',
+  image: 'https://cdn.pixabay.com/photo/2020/02/10/09/18/calendar-4835848_1280.jpg',
+  available: true
+},
+{
+  id: 6,
+  title: 'Tablet ultraligera 10"',
+  description: 'Pantalla HD, ideal para streaming y productividad en movimiento.',
+  image: 'https://cdn.pixabay.com/photo/2014/11/12/15/48/tablet-pc-528464_640.jpg',
+  available: false
+}
+
 ];
