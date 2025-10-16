@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
-import { MainComponent } from './main/main.component';
-import { FooterComponent } from './footer/footer.component';
-import { AvatarComponent } from './avatar/avatar.component';
-import { UserCardComponent } from './user-card/user-card.component';
-import { UserReviewComponent } from './user-review/user-review.component';
+import { HeaderComponent } from './components/header/header.component';
+import { MainComponent } from './components/main/main.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { UserReviewComponent } from './components/user-review/user-review.component';
+import { AvatarComponent } from './components/avatar/avatar.component';
+
 
 
 @Component({
@@ -15,13 +14,11 @@ import { UserReviewComponent } from './user-review/user-review.component';
   standalone: true,
   imports: [
     CommonModule, 
-    RouterOutlet, 
-    HeaderComponent, 
-    MainComponent, 
+    HeaderComponent,
+    MainComponent,
     FooterComponent,
-    AvatarComponent,
-    UserCardComponent,
-    UserReviewComponent
+    UserReviewComponent,
+    AvatarComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
