@@ -23,7 +23,50 @@
   background-color: rgba(20, 20, 20, 0.6); // oscurece la imagen
   z-index: 1;
 }
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  background: transparent;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
 
+ .main-nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s ease;
+    
+  
+   .main-nav a { 
+      &:hover {
+      color: #007acc;
+    }
+
+    .main-nav  a {
+    &.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: #007acc;
+    }
+  }
+   }}}
+
+.main-nav a:hover {
+  color: #007acc;
+}
 .hero-content {
   position: relative;
   z-index: 2;
