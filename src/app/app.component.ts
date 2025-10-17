@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ComponentsModule } from './components/components.module';
 import { RouterOutlet } from '@angular/router';
-
-
+import { AppRoutingModule } from './app-routing.module';
 
 @Component({
   
@@ -12,8 +11,9 @@ import { RouterOutlet } from '@angular/router';
   imports: [
     CommonModule,
     ComponentsModule, 
-    RouterOutlet
-],
+    RouterOutlet,
+    AppRoutingModule
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

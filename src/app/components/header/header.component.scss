@@ -34,13 +34,13 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 2000000;
   cursor: pointer;
-
- .main-nav a {
+  
+  a {
     text-decoration: none;
     font-weight: bold;
-    color: #333;
+    color: white;
     font-size: 1.1rem;
     position: relative;
     transition: color 0.3s ease;
@@ -63,6 +63,20 @@
     }
   }
    }}}
+.active {
+  background-color: rgba(255, 255, 255, 0.8); // blanco fino transparente
+  color: #000; // texto negro
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px; // puntas redondeadas
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // sombra sutil
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #007acc; // azul elegante al pasar el mouse
+  }
+}
 
 .main-nav a:hover {
   color: #007acc;

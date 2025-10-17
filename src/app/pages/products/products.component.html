@@ -5,29 +5,29 @@
     <p>{{ product.description }}</p>
 
     <div class="buttons">
-      <button (click)="save(product)">⭐ Favorit</button>
-      <button [disabled]="!product.available" (click)="buy(product)">🛒 Kaufen</button>
+      <button (click)="save(product)">⭐ Favorito</button>
+      <button [disabled]="!product.available" (click)="buy(product)">🛒 Comprar</button>
     </div>
   </div>
 </div>
 
 <div *ngIf="showForm" class="contact-form">
-  <h3>📋 Kontaktformular</h3>
+  <h3>📋 Formulario de contacto</h3>
   <form>
-    <input type="text" placeholder="Name" [(ngModel)]="contact.name" name="name" />
-    <input type="text" placeholder="Adresse" [(ngModel)]="contact.address" name="address" />
+    <input type="text" placeholder="Nombre" [(ngModel)]="contact.name" name="name" />
+    <input type="text" placeholder="dirección" [(ngModel)]="contact.address" name="address" />
   </form>
 
-  <h4>🧺 Dein Warenkorb:</h4>
+  <h4>🧺 Tu carrito:</h4>
   <ul>
     <li *ngFor="let item of cart; let i = index">
       {{ item.title }}
-      <button class="remove-btn" (click)="removeItem(i)">🗑️ Entfernen</button>
+      <button class="remove-btn" (click)="removeItem(i)">🗑️ Eliminar</button>
     </li>
   </ul>
 
   <div class="form-actions">
-    <button (click)="clearCart()">🧹 Alles löschen</button>
-    <button (click)="cancelForm()">❌ Abbrechen</button>
+    <button (click)="clearCart()">🧹 Eliminar todo</button>
+    <button (click)="cancelForm()">❌ Cancelar</button>
   </div>
 </div>

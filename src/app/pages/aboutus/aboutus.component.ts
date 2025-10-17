@@ -11,5 +11,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './aboutus.component.scss'
 })
 export class AboutusComponent {
-
+  nombre = 'Diego';
+  origen = 'Suiza, actualmente en Benicàssim, España';
+  perfil = 'Soy un desarrollador full stack con enfoque en frontend, apasionado por la automatización, la documentación clara y el diseño elegante.';
+  enfoque = 'Me gusta crear soluciones reutilizables, interfaces limpias y trabajar en equipo para lograr resultados sostenibles y escalables.';
 }

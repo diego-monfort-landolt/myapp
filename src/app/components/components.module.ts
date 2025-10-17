@@ -8,6 +8,8 @@ import { AvatarComponent } from './avatar/avatar.component';
 import { UserCardComponent } from './user-card/user-card.component';
 import { UserReviewComponent } from './user-review/user-review.component';
 
+import { AppRoutingModule } from '../app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -20,13 +22,15 @@ import { UserReviewComponent } from './user-review/user-review.component';
     AvatarComponent,
     UserCardComponent,
     UserReviewComponent,
+    AppRoutingModule
   ],
   exports: [
     HeaderComponent, 
     MainComponent,
     FooterComponent,
     AvatarComponent,
-    UserReviewComponent
+    UserReviewComponent,
+    AppRoutingModule
   ],
 })
 export class ComponentsModule { }
