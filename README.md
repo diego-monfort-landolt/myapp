@@ -2,6 +2,8 @@
 
 Este proyecto es parte de mi proceso de aprendizaje en Angular. Estoy practicando conceptos básicos como componentes, estilos SCSS, diseño responsive y comunicación entre componentes. El objetivo es construir una base sólida para desarrollar aplicaciones modernas y elegantes.
 
+https://diego-monfort-landolt.github.io/myapp/home
+
 ## 🚀 ¿Qué incluye?
 
 - Componente `Header` tipo Onepager con imagen de fondo oscurecida y título dinámico
