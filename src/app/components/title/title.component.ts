@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
-
 @Component({
   selector: 'app-title',
   standalone: true,

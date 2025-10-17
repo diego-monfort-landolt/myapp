@@ -16,6 +16,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './products.component.scss'
 })
 export class ProductsComponent {
+  pageTitle = 'Mis Productos';
   products = PRODUCTS;
   saved: Product[] = [];
   cart: Product[] = [];

@@ -10,10 +10,10 @@ import { AppRoutingModule } from './app-routing.module';
   standalone: true,
   imports: [
     CommonModule,
-    ComponentsModule, 
+    ComponentsModule,
     RouterOutlet,
-    AppRoutingModule
-  ],
+    AppRoutingModule,
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

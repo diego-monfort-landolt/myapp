@@ -4,6 +4,7 @@ import { ProductsComponent } from './products/products.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { TitleComponent } from '../components/title/title.component';
 
 @NgModule({
   declarations: [],
@@ -12,7 +13,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
     HomeComponent,
     ProductsComponent,
     AboutusComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    TitleComponent
   ],
   exports: [
     HomeComponent,

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+
 @Component({
   selector: 'app-aboutus',
   standalone: true,
@@ -11,6 +12,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './aboutus.component.scss'
 })
 export class AboutusComponent {
+  pageTitle = 'Sobre mi';
   nombre = 'Diego';
   origen = 'Suiza, actualmente en Benicàssim, España';
   perfil = 'Soy un desarrollador full stack con enfoque en frontend, apasionado por la automatización, la documentación clara y el diseño elegante.';
