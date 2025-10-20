@@ -5,9 +5,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 
 export const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'products', component: ProductsComponent },
-  { path: 'about-us', component: AboutusComponent },
+  { path: 'home', component: HomeComponent, title: 'Inicio' },
+  { path: 'products', component: ProductsComponent, title: 'Productos' },
+  { path: 'about-us', component: AboutusComponent, title: 'Sobre mi' },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', component: NotfoundComponent },
+  { path: '**', component: NotfoundComponent, title: '404' },
 ];

@@ -10,5 +10,10 @@ import { MainComponent } from "../../components/main/main.component";
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-pageTitle = 'Home';
+pageTitle = 'Inicio de mi Pagina Angular';
+  
+  constructor() {}
+  onDataCheck(e: any) {
+    console.log(e);
+  }
 }
