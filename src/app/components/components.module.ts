@@ -9,6 +9,7 @@ import { UserCardComponent } from './user-card/user-card.component';
 import { UserReviewComponent } from './user-review/user-review.component';
 
 import { AppRoutingModule } from '../app-routing.module';
+import { ProjectGalleryComponent } from './project-gallery/project-gallery.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { AppRoutingModule } from '../app-routing.module';
     AvatarComponent,
     UserCardComponent,
     UserReviewComponent,
+    ProjectGalleryComponent,
     AppRoutingModule
   ],
   exports: [
@@ -30,7 +32,9 @@ import { AppRoutingModule } from '../app-routing.module';
     FooterComponent,
     AvatarComponent,
     UserReviewComponent,
-    AppRoutingModule
+    AppRoutingModule,
+    ProjectGalleryComponent
+    
   ],
 })
 export class ComponentsModule { }

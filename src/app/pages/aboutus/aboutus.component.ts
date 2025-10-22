@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ProjectGalleryComponent } from '../../components/project-gallery/project-gallery.component';
 
 
 @Component({
@@ -7,9 +8,10 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [
     CommonModule,
+    ProjectGalleryComponent
   ],
   templateUrl: './aboutus.component.html',
-  styleUrl: './aboutus.component.scss'
+  styleUrls: ['./aboutus.component.scss']
 })
 export class AboutusComponent {
   pageTitle = 'Sobre mi';

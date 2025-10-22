@@ -1,0 +1,9 @@
+<div class="gallery-container">
+  <div class="project-card" *ngFor="let project of projects">
+    <img [src]="project.imageUrl" alt="{{ project.title }}" />
+    <h3>{{ project.title }}</h3>
+    <p>{{ project.description }}</p>
+    <span>👨‍💻 {{ project.creator }}</span>
+    <a [href]="project.link" target="_blank">🔗 Projekt ansehen</a>
+  </div>
+</div>
