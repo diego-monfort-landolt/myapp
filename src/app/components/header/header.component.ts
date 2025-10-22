@@ -26,7 +26,7 @@ this.router.events.pipe(
   const navEnd = event as NavigationEnd;
   const url = navEnd.urlAfterRedirects;
 
-  if (url.includes('/home')) this.pageTitle = 'Bienvenido a Home';
+  if (url.includes('/home')) this.pageTitle = 'Bienvenido a la Página Principal';
   else if (url.includes('/about-us')) this.pageTitle = 'Sobre mi';
   else if (url.includes('/products')) this.pageTitle = 'Nuestros Productos';
   else this.pageTitle = 'Mi App Angular';
