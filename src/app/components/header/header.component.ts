@@ -33,10 +33,7 @@ this.router.events.pipe(
 });
 
 }
-
-
  onDataCheck(e: any) {
     console.log(e);
   }
-
 }
