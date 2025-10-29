@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { ViewChild, ElementRef } from '@angular/core';
 
 
 @Component({
@@ -18,6 +19,9 @@ import { filter } from 'rxjs/operators';
 })
 export class HeaderComponent {
   pageTitle = '';
+  avatarUrl = 'https://cdn.pixabay.com/photo/2017/11/10/05/46/user-2935524_640.png';
+
+  @ViewChild('fileInput') fileInput!: ElementRef<HTMLInputElement>;
   
 constructor(private router: Router) {
 this.router.events.pipe(
@@ -31,8 +35,24 @@ this.router.events.pipe(
   else if (url.includes('/products')) this.pageTitle = 'Nuestros Productos';
   else this.pageTitle = 'Mi App Angular';
 });
-
 }
+
+  triggerFileInput() {
+    this.fileInput.nativeElement.click();
+  }
+
+  onFileSelected(event: Event) {
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files[0]) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.avatarUrl = reader.result as string;
+      };
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+
+
  onDataCheck(e: any) {
     console.log(e);
   }

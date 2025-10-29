@@ -114,6 +114,33 @@
   }
 }
 
+.profile-avatar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+  cursor: pointer;
+
+  img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #fa0000;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(79, 248, 1, 0.651);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      opacity: 0.85;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .profile-avatar img {
+    display: none !important;
+  }
+}
 
 .hero-subtitle {
   font-size: 1.2rem;
@@ -121,10 +148,10 @@
   color: #fff;
   margin-top: 0.5rem;
 
-  @media (max-width: 768px) {
-    font-size: 1rem;
-    padding: 0 1rem;
-  }
+ @media (max-width: 768px) {
+  font-size: 1rem;
+  padding: 0 1rem;
+}
 
   @media (max-width: 480px) {
     font-size: 0.95rem;

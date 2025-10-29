@@ -3,11 +3,13 @@
   <a routerLink="/home" routerLinkActive="active">Home</a>
   <a routerLink="/about-us" routerLinkActive="active">About Us</a>
   <a routerLink="/products" routerLinkActive="active">Productos</a>
+
+    <div class="profile-avatar" (click)="triggerFileInput()">
+  <img [src]="avatarUrl" alt="Avatar" />
+  <input type="file" #fileInput accept="image/*" (change)="onFileSelected($event)" hidden />
+</div>
 </nav>
 
-  <div class="profile-avatar">
-    <img src="https://cdn.pixabay.com/photo/2024/03/07/16/10/ai-generated-8618866_640.jpg" alt="Avatar" />
-  </div>
   <div class="overlay"></div>
   <div class="hero-content">
     <app-title [title]="pageTitle" (dataFromChild)="onDataCheck($event)"></app-title>
