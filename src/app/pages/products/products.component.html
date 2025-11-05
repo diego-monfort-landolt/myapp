@@ -1,12 +1,12 @@
 <div class="card-container">
   <div class="card" *ngFor="let product of products">
-    <img [src]="product.image" alt="{{product.title}}" class="product-img" />
-    <h2>{{ product.title }}</h2>
-    <p>{{ product.description }}</p>
+    <img [src]="product['image']" alt="{{product['title']}}" class="product-img" />
+    <h2>{{ product['title'] }}</h2>
+    <p>{{ product['description'] }}</p>
 
     <div class="buttons">
       <button (click)="save(product)">⭐ Favorito</button>
-      <button [disabled]="!product.available" (click)="buy(product)">🛒 Comprar</button>
+      <button [disabled]="!product['available']" (click)="buy(product)">🛒 Comprar</button>
     </div>
   </div>
 </div>
@@ -21,7 +21,7 @@
   <h4>🧺 Tu carrito:</h4>
   <ul>
     <li *ngFor="let item of cart; let i = index">
-      {{ item.title }}
+      {{ item['title'] }}
       <button class="remove-btn" (click)="removeItem(i)">🗑️ Eliminar</button>
     </li>
   </ul>

@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AvatarComponent } from './avatar/avatar.component';
 import { UserCardComponent } from './user-card/user-card.component';
 import { UserReviewComponent } from './user-review/user-review.component';
+import { ShoppingCardComponent } from './shopping-card/shopping-card.component';
 
 import { AppRoutingModule } from '../app-routing.module';
 import { ProjectGalleryComponent } from './project-gallery/project-gallery.component';
@@ -24,7 +25,8 @@ import { ProjectGalleryComponent } from './project-gallery/project-gallery.compo
     UserCardComponent,
     UserReviewComponent,
     ProjectGalleryComponent,
-    AppRoutingModule
+    AppRoutingModule,
+    ShoppingCardComponent,
   ],
   exports: [
     HeaderComponent, 
@@ -33,7 +35,8 @@ import { ProjectGalleryComponent } from './project-gallery/project-gallery.compo
     AvatarComponent,
     UserReviewComponent,
     AppRoutingModule,
-    ProjectGalleryComponent
+    ProjectGalleryComponent,
+    ShoppingCardComponent
     
   ],
 })

@@ -28,7 +28,7 @@ export class ProductsComponent {
   }
 
   buy(product: Product) {
-    if (product.available) {
+    if (product['available']) {
       this.cart = [...this.saved];
       this.showForm = true;
     }

@@ -33,6 +33,7 @@ this.router.events.pipe(
   if (url.includes('/home')) this.pageTitle = 'Bienvenido a la Página Principal';
   else if (url.includes('/about-us')) this.pageTitle = 'Sobre mi';
   else if (url.includes('/products')) this.pageTitle = 'Nuestros Productos';
+  else if (url.includes('/shopping-card')) this.pageTitle = 'Carrito de Compras';
   else this.pageTitle = 'Mi App Angular';
 });
 }
