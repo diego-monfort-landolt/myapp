@@ -1,30 +1,68 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { BehaviorSubject } from 'rxjs';
+import { Product } from '../../app/pages/products/product.modal';
 import { PRODUCTS } from '../../app/pages/products/product-data';
-import { Product } from '../components/shopping-card/shopping-card.component';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ShoppingCartService {
-  private items: Product[] = [];
+  private readonly storageKey = 'cartItemIds';
+  private isBrowser: boolean;
+  private cartItemsSubject = new BehaviorSubject<Product[]>([]);
 
-  getItems(): Product[] {
-    return this.items;
+  constructor(@Inject(PLATFORM_ID) platformId: Object) {
+    this.isBrowser = isPlatformBrowser(platformId);
+    if (this.isBrowser) {
+      this.cartItemsSubject.next(this.loadItems());
+    }
   }
 
-  addToCart(product: Product): void {
-    this.items.push(product);
+  getItems$() {
+    return this.cartItemsSubject.asObservable();
+  }
+
+  getItems(): Product[] {
+    return this.isBrowser ? this.loadItems() : [];
+  }
+
+  addToCart(id: number): void {
+    if (!this.isBrowser) return;
+    const ids = this.getStoredIds();
+    if (!ids.includes(id)) {
+      ids.push(id);
+      this.saveItems(ids);
+    }
   }
 
   removeFromCart(id: number): void {
-    this.items = this.items.filter(item => item.id !== id);
+    if (!this.isBrowser) return;
+    const ids = this.getStoredIds().filter(itemId => itemId !== id);
+    this.saveItems(ids);
   }
 
   clearCart(): void {
-    this.items = [];
+    if (this.isBrowser) {
+      this.saveItems([]);
+    }
   }
 
-  getTotal(): number {
-    return this.items.reduce((sum, item) => sum + (item.price || 0), 0);
+  private getStoredIds(): number[] {
+    if (!this.isBrowser) return [];
+    const stored = localStorage.getItem(this.storageKey);
+    return stored ? JSON.parse(stored) : [];
+  }
+
+  private saveItems(ids: number[]): void {
+    if (this.isBrowser) {
+      localStorage.setItem(this.storageKey, JSON.stringify(ids));
+      this.cartItemsSubject.next(PRODUCTS.filter(p => ids.includes(p.id)));
+    }
+  }
+
+  private loadItems(): Product[] {
+    const ids = this.getStoredIds();
+    return PRODUCTS.filter(p => ids.includes(p.id));
   }
 }

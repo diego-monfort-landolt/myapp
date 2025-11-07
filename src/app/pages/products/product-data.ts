@@ -26,7 +26,7 @@ export const PRODUCTS: Product[] = [
     image: 'https://cdn.pixabay.com/photo/2021/09/25/17/43/iphone-13-6655518_640.jpg',
     available: false,
     name: "",
-    price: 60
+    price: 460
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ export const PRODUCTS: Product[] = [
     image: 'https://cdn.pixabay.com/photo/2018/09/17/14/27/headphones-3683983_1280.jpg',
     available: true,
     name: "",
-    price: 0,
+    price: 430,
   },
   {
     id: 5,
@@ -44,7 +44,7 @@ export const PRODUCTS: Product[] = [
     image: 'https://cdn.pixabay.com/photo/2020/02/10/09/18/calendar-4835848_1280.jpg',
     available: true,
     name: "",
-    price: 0
+    price: 40
   },
   {
     id: 6,
@@ -53,6 +53,6 @@ export const PRODUCTS: Product[] = [
     image: 'https://cdn.pixabay.com/photo/2014/11/12/15/48/tablet-pc-528464_640.jpg',
     available: false,
     name: "",
-    price: 0
+    price: 40
   },
 ];

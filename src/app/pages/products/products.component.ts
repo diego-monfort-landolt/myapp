@@ -36,15 +36,12 @@ export class ProductsComponent {
   removeItem(index: number) {
   this.cart.splice(index, 1);
 }
-
 clearCart() {
   this.cart = [];
 }
-
 cancelForm() {
   this.showForm = false;
   this.cart = [];
   this.contact = { name: '', address: '' };
 }
-
 }
