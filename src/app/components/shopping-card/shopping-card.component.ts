@@ -3,6 +3,7 @@ import { isPlatformBrowser, CommonModule } from '@angular/common';
 import { ShoppingCartService } from '../../services/shopping-cart.service';
 import { Product } from '../../pages/products/product.modal';
 import { Subscription } from 'rxjs';
+import { PRODUCTS } from '../../pages/products/product-data';
 
 @Component({
   selector: 'app-shopping-card',

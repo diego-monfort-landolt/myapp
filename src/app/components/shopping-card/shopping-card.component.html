@@ -19,7 +19,6 @@
       <button (click)="removeItem(item.id)">❌ Eliminar</button>
     </div>
   </div>
-
   <div class="total" *ngIf="cartItems.length > 0">
     <hr />
     <p><strong>Total:</strong> {{ getTotal() | currency: 'EUR' }}</p>
