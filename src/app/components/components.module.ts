@@ -12,7 +12,6 @@ import { ShoppingCardComponent } from './shopping-card/shopping-card.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { ProjectGalleryComponent } from './project-gallery/project-gallery.component';
 
-
 @NgModule({
   declarations: [
   ],
@@ -36,8 +35,7 @@ import { ProjectGalleryComponent } from './project-gallery/project-gallery.compo
     UserReviewComponent,
     AppRoutingModule,
     ProjectGalleryComponent,
-    ShoppingCardComponent
-    
+    ShoppingCardComponent   
   ],
 })
 export class ComponentsModule { }
