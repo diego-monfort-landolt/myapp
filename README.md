@@ -23,6 +23,13 @@ Sombra, bordes redondeados y tipografía clara
 ## 🤝 Colaboración
 Este proyecto está abierto a colaboraciones. Estoy aprendiendo a trabajar en equipo, por lo que cualquier contribución, sugerencia o mejora será bienvenida. El objetivo es crecer juntos como desarrolladores.
 
+## ✅ TODO
+
+- [ ] 🛒 Integrar completamente el carrito de compras (servicio, interfaz, almacenamiento persistente)
+- [ ] 📱 Optimizar el diseño responsivo para móviles y tablets
+- [ ] 🧪 Implementar pruebas unitarias para servicios y componentes clave
+
+
 ### 📦 Cómo ejecutar
 
 ```bash

@@ -13,7 +13,7 @@ import { PRODUCTS } from '../../pages/products/product-data';
   styleUrl: './shopping-card.component.scss'
 })
 export class ShoppingCardComponent implements OnInit, OnDestroy {
-  pageTitle = 'Mi Compra';
+
   cartItems: Product[] = [];
   isBrowser: boolean;
   private subscription!: Subscription;

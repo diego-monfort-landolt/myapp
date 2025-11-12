@@ -19,12 +19,22 @@ export class ShoppingCartService {
     }
   }
 
-  getItems$() {
-    return this.cartItemsSubject.asObservable();
+  private loadItems(): Product[] {
+    if (!this.isBrowser) return [];
+    const stored = localStorage.getItem(this.storageKey);
+    const ids = stored ? JSON.parse(stored) : [];
+    return PRODUCTS.filter(p => ids.includes(p.id));
   }
 
-  getItems(): Product[] {
-    return this.isBrowser ? this.loadItems() : [];
+  private saveItems(ids: number[]): void {
+    if (this.isBrowser) {
+      localStorage.setItem(this.storageKey, JSON.stringify(ids));
+      this.cartItemsSubject.next(PRODUCTS.filter(p => ids.includes(p.id)));
+    }
+  }
+
+  getItems$() {
+    return this.cartItemsSubject.asObservable();
   }
 
   addToCart(id: number): void {
@@ -52,17 +62,5 @@ export class ShoppingCartService {
     if (!this.isBrowser) return [];
     const stored = localStorage.getItem(this.storageKey);
     return stored ? JSON.parse(stored) : [];
-  }
-
-  private saveItems(ids: number[]): void {
-    if (this.isBrowser) {
-      localStorage.setItem(this.storageKey, JSON.stringify(ids));
-      this.cartItemsSubject.next(PRODUCTS.filter(p => ids.includes(p.id)));
-    }
-  }
-
-  private loadItems(): Product[] {
-    const ids = this.getStoredIds();
-    return PRODUCTS.filter(p => ids.includes(p.id));
   }
 }
