@@ -1,49 +1,36 @@
-import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser, CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { ShoppingCartService } from '../../services/shopping-cart.service';
 import { Product } from '../../pages/products/product.modal';
-import { Subscription } from 'rxjs';
-import { PRODUCTS } from '../../pages/products/product-data';
 
 @Component({
   selector: 'app-shopping-card',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './shopping-card.component.html',
-  styleUrl: './shopping-card.component.scss'
+  styleUrl: './shopping-card.component.scss',
 })
-export class ShoppingCardComponent implements OnInit, OnDestroy {
-
+export class ShoppingCardComponent implements OnInit {
+[x: string]: any;
   cartItems: Product[] = [];
-  isBrowser: boolean;
-  private subscription!: Subscription;
 
-  constructor(
-    private cartService: ShoppingCartService,
-    @Inject(PLATFORM_ID) private platformId: Object
-  ) {
-    this.isBrowser = isPlatformBrowser(this.platformId);
-  }
+  constructor(private cartService: ShoppingCartService) {}
 
   ngOnInit(): void {
-    if (this.isBrowser) {
-      this.subscription = this.cartService.getItems$().subscribe(items => {
-        this.cartItems = items;
-      });
-    }
+    this.cartService.cart$.subscribe(items => {
+      this.cartItems = items;
+    });
   }
 
   removeItem(id: number): void {
-    if (this.isBrowser) {
-      this.cartService.removeFromCart(id);
-    }
+    this.cartService.removeFromCart(id);
   }
 
   getTotal(): number {
     return this.cartItems.reduce((sum, item) => sum + item.price, 0);
   }
 
-  ngOnDestroy(): void {
-    this.subscription?.unsubscribe();
+  clearCart(): void {
+    this.cartService.clearCart();
   }
 }

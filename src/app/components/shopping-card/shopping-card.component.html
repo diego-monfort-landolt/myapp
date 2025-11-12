@@ -1,26 +1,20 @@
 <div class="card-container">
   <h2>🛍️ Tu carrito</h2>
 
-  <div *ngIf="cartItems.length === 0" class="empty">
-    No hay productos en el carrito.
-  </div>
+  <div *ngIf="cartItems.length === 0">No hay productos en el carrito.</div>
 
   <div *ngFor="let item of cartItems" class="card">
-    <img
-      *ngIf="item.image"
-      [src]="item.image"
-      alt="{{ item.name || item['title'] }}"
-      (error)="item.image = 'assets/fallback.jpg'"
-    />
+    <img *ngIf="item.image" [src]="item.image" alt="{{ item.name }}" />
     <div class="info">
-      <h3>{{ item.name || item['title'] }}</h3>
+      <h3>{{ item.name }}</h3>
       <p>{{ item.description }}</p>
-      <p><strong>{{ item.price | currency: 'EUR' }}</strong></p>
+      <p><strong>{{ item.price | currency:'EUR' }}</strong></p>
       <button (click)="removeItem(item.id)">❌ Eliminar</button>
     </div>
   </div>
+  
   <div class="total" *ngIf="cartItems.length > 0">
     <hr />
-    <p><strong>Total:</strong> {{ getTotal() | currency: 'EUR' }}</p>
+    <p><strong>Total:</strong> {{ getTotal() | currency:'EUR' }}</p>
   </div>
 </div>
