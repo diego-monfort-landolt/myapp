@@ -15,12 +15,10 @@ export class ShoppingCartService {
       this.cartSubject.next([...current, product]);
     }
   }
-
   removeFromCart(id: number): void {
     const updated = this.cartSubject.getValue().filter(p => p.id !== id);
     this.cartSubject.next(updated);
   }
-
   clearCart(): void {
     this.cartSubject.next([]);
   }
