@@ -23,6 +23,17 @@ export class ProductsComponent {
   showForm = false;
   contact = { name: '', address: '' };
 
+  savedProducts: string[] = [];
+
+ngOnInit() {
+  const saved = localStorage.getItem('pedido');
+  if (saved) {
+    const parsed = JSON.parse(saved);
+    this.savedProducts = parsed.cart.map((p: any) => p.title);
+  }
+}
+
+
   save(product: Product) {
     if (!this.saved.includes(product)) this.saved.push(product);
   }
@@ -44,4 +55,20 @@ cancelForm() {
   this.cart = [];
   this.contact = { name: '', address: '' };
 }
+ saveLocal() {
+  const data = {
+    name: this.contact.name,
+    address: this.contact.address,
+    cart: this.cart,
+    link: window.location.href
+  };
+
+  localStorage.setItem('pedido', JSON.stringify(data));
+
+  alert("Guardado en LocalStorage!");
 }
+
+}
+
+
+

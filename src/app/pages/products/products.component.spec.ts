@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProductsComponent } from './products.component';
+import { describe, beforeEach, it } from 'node:test';
 
 describe('ProductsComponent', () => {
   let component: ProductsComponent;
@@ -21,3 +22,7 @@ describe('ProductsComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+function expect(component: ProductsComponent) {
+  throw new Error('Function not implemented.');
+}
+

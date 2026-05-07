@@ -1,5 +1,8 @@
 <div class="card-container">
   <div class="card" *ngFor="let product of products">
+    <div class="badge" *ngIf="savedProducts.includes(product['title'])">
+    ❤️
+  </div>
     <img [src]="product['image']" alt="{{product['title']}}" class="product-img" />
     <h2>{{ product['title'] }}</h2>
     <p>{{ product['description'] }}</p>
@@ -8,8 +11,10 @@
       <button (click)="save(product)">⭐ Favorito</button>
       <button [disabled]="!product['available']" (click)="buy(product)">🛒 Comprar</button>
     </div>
+    
   </div>
 </div>
+
 
 <div *ngIf="showForm" class="contact-form">
   <h3>📋 Formulario de contacto</h3>
@@ -17,7 +22,6 @@
     <input type="text" placeholder="Nombre" [(ngModel)]="contact.name" name="name" />
     <input type="text" placeholder="dirección" [(ngModel)]="contact.address" name="address" />
   </form>
-
   <h4>🧺 Tu carrito:</h4>
   <ul>
     <li *ngFor="let item of cart; let i = index">
@@ -25,9 +29,9 @@
       <button class="remove-btn" (click)="removeItem(i)">🗑️ Eliminar</button>
     </li>
   </ul>
-
   <div class="form-actions">
     <button (click)="clearCart()">🧹 Eliminar todo</button>
     <button (click)="cancelForm()">❌ Cancelar</button>
+     <button (click)="saveLocal()">💾 Guardar</button>
   </div>
 </div>

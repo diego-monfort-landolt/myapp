@@ -16,6 +16,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background: #fff;
   transition: transform 0.2s ease;
+   
 
   &:hover {
     transform: translateY(-4px);
@@ -131,5 +132,6 @@
       background-color: #bbb;
     }
   }
+  
 }
 

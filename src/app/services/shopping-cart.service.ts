@@ -8,6 +8,7 @@ import { Product } from '../pages/products/product.modal';
 export class ShoppingCartService {
   private cartSubject = new BehaviorSubject<Product[]>([]);
   cart$ = this.cartSubject.asObservable();
+  
 
   addToCart(product: Product): void {
     const current = this.cartSubject.getValue();
