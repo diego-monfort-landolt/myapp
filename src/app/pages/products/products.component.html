@@ -6,7 +6,6 @@
     <img [src]="product['image']" alt="{{product['title']}}" class="product-img" />
     <h2>{{ product['title'] }}</h2>
     <p>{{ product['description'] }}</p>
-
     <div class="buttons">
       <button (click)="save(product)">⭐ Favorito</button>
       <button [disabled]="!product['available']" (click)="buy(product)">🛒 Comprar</button>
