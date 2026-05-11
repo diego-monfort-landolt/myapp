@@ -21,7 +21,6 @@ describe('ProductsComponent', () => {
   //   expect(component).toBeTruthy();
   // });
 });
-
 function expect(component: ProductsComponent) {
   throw new Error('Function not implemented.');
 }
